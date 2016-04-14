@@ -102,7 +102,7 @@ block content
                 td=error.last_error
               tr
                 th Last Heartbeat
-                td=error.last_heartbeat
+                td.from-now=error.last_heartbeat
               tr
                 th Console Enabled?
                 td=error.console_enabled
@@ -148,3 +148,11 @@ block content
         #raw.panel-collapse.collapse
           .panel-body
             pre=raw
+
+  script(type='text/javascript').
+    var lastHeartbeat = moment().subtract($('.from-now').text(), 'seconds');
+
+    $('.from-now').text(
+      lastHeartbeat.fromNow()
+      + ' (' + lastHeartbeat.format('YYYY-MM-DD HH:MM:ss') + ')'
+    );

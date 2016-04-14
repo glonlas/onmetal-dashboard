@@ -74,7 +74,7 @@ var getNodeDetail = function (res, node, region) {
     },
     error: {
       last_error: node.last_error,
-      last_heartbeat: time_since_heartbeat + 's ago',
+      last_heartbeat: time_since_heartbeat,
       console_enabled: node.console_enabled
     },
     maintenance: {
