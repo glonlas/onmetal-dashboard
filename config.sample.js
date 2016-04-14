@@ -239,8 +239,8 @@ module.exports = {
       name: 'provisioned',
       label: 'Provisioned',
       moodType: 'good',
-      color: '#78CD3B',
-      highlight: '#8DC452',
+      color: '#8DC452',
+      highlight: '#89D339',
       validate: function (node) {
         return (node.provision_state === 'active' && node.maintenance !== true &&
                 node.instance_uuid !== null && node.power_state === 'power on');
